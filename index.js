@@ -28,7 +28,7 @@ const update = () => {
   const remainingDiv = document.getElementById("remaining");
   if (durationRemaining > 0) {
     answerDiv.textContent = "No.";
-    remainingDiv.textContent = remainingString + " remaining."
+    remainingDiv.innerHTML = remainingString + " remaining until <a href='https://factorio.com/blog/post/fff-418'>Factorio: Space Age is released.</a>"
   } else {
       answerDiv.textContent = "Yes!";
       remainingDiv.textContent = "The Factory Must Grow";

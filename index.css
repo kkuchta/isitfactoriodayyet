@@ -21,3 +21,6 @@ h2 {
         margin-top: 40px;
     }
 }
+a, a:visited {
+    color: #444;
+}
