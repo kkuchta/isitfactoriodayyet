@@ -6,11 +6,11 @@ const update = () => {
       str += `${days} days, `;
     }
     const hours = Math.floor((duration / (1000 * 60 * 60)) % 24);
-    if (days > 0 && hours > 0) {
+    if (days > 0 || hours > 0) {
       str += `${hours} hours, `;
     }
     const minutes = Math.floor((duration / 1000 / 60) % 60);
-    if (days > 0 && hours > 0 && minutes > 0) {
+    if (days > 0 || hours > 0 || minutes > 0) {
       str += `${minutes} minutes, and `;
     }
     const seconds = Math.floor((duration / 1000) % 60);
