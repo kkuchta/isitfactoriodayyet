@@ -3,19 +3,23 @@ const update = () => {
     let str = "";
     const days = Math.floor(duration / (1000 * 60 * 60 * 24));
     if (days > 0) {
-      str += `${days} days, `;
+      if(days == 1) str += `${days} day, `;
+      else          str += `${days} days, `; // very efficient.
     }
     const hours = Math.floor((duration / (1000 * 60 * 60)) % 24);
     if (days > 0 || hours > 0) {
-      str += `${hours} hours, `;
+      if(hours == 1)  str += `${hours} hour, `;
+      else            str += `${hours} hours, `; // very efficient as well.
     }
     const minutes = Math.floor((duration / 1000 / 60) % 60);
     if (days > 0 || hours > 0 || minutes > 0) {
-      str += `${minutes} minutes`;
+      str += `${minutes} minute`;
+      if(minutes != 1) str += "s";
     }
     const seconds = Math.floor((duration / 1000) % 60);
     if (seconds > 0) {
-      str += `, and ${seconds} seconds`;
+      str += `, and ${seconds} second`;
+      if(seconds != 1) str += "s";
     }
     return str;
   }
@@ -55,3 +59,5 @@ const update = () => {
 }
 update();
 setInterval(update, 1000);
+
+// vivaloz was here
