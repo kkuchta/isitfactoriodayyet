@@ -11,11 +11,11 @@ const update = () => {
     }
     const minutes = Math.floor((duration / 1000 / 60) % 60);
     if (days > 0 || hours > 0 || minutes > 0) {
-      str += `${minutes} minutes, and `;
+      str += `${minutes} minutes`;
     }
     const seconds = Math.floor((duration / 1000) % 60);
     if (seconds > 0) {
-      str += `${seconds} seconds`;
+      str += `, and ${seconds} seconds`;
     }
     return str;
   }
