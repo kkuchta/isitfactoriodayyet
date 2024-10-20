@@ -20,7 +20,7 @@ const update = () => {
     return str;
   }
 
-  const releaseDate = new Date("2024-10-21 00:00:00");
+  const releaseDate = new Date(Date.UTC(2024, 9, 21, 11));
   const durationRemaining = releaseDate - Date.parse(new Date());
   const remainingString = getTimeRemaining(durationRemaining);
 
